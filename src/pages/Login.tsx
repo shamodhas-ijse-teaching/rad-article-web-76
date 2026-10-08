@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { getMyDetails, login } from "../service/auth."
+import { getMyDetails, login } from "../service/auth"
 
 function Login() {
   const navigate = useNavigate()
@@ -27,10 +27,7 @@ function Login() {
       localStorage.setItem("ACCESS_TOKEN", accessToken)
       localStorage.setItem("REFRESH_TOKEN", refreshToken)
 
-      const userRes = await getMyDetails()
-      const userData = userRes.data
-
-      navigate("/home")
+      navigate("/")
     } catch (err) {
       console.error(err)
       alert("Login fail..!")
