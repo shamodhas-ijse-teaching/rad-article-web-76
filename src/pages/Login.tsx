@@ -27,7 +27,8 @@ function Login() {
       localStorage.setItem("ACCESS_TOKEN", accessToken)
       localStorage.setItem("REFRESH_TOKEN", refreshToken)
 
-      navigate("/")
+      // navigate("/")
+      window.location.href = "/"
     } catch (err) {
       console.error(err)
       alert("Login fail..!")
